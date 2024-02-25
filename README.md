@@ -1,2 +1,2 @@
-# Algoritmos-De-Planificaci-n
+# Algoritmos-De-Planificación
 Simulación de los algoritmos de planificación
