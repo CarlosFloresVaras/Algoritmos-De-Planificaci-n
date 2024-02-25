@@ -1,10 +1,16 @@
+//  PROYECTO PRIMER PARCIAL EQUIPO 6 SISTEMAS OPERATIVOS
+
 #include "FCFS.h"
 
 int main() {
+
+    // Variables para el menú
     int opc = -1;
     int aux = -1;
     int quantum = -1;
     setlocale(LC_ALL,"");
+
+    // Menú
     do{
         do{
             cout << "Menú" << endl;
