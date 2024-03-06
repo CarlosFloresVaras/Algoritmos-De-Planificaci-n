@@ -37,7 +37,7 @@ bool compararPorLlegada(const procesos& a, const procesos& b) {
 
 // Función para comparar dos procesos por su duración
 bool compararPorDuracion(const procesos& a, const procesos& b) {
-    return a.llegada < b.llegada;
+    return a.duracion < b.duracion;
 }
 
 // Función para poblar la lista de procesos
