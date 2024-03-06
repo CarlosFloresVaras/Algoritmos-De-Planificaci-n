@@ -21,6 +21,15 @@ struct procesos{
 
 // Funciones
 
+float promedio(vector<procesos> lista){ // Función para calcular el promedio de duración de los procesos
+    float promedio = 0;
+    for (const auto& proceso : lista) {
+        promedio += proceso.duracion;
+    }
+    printf("El promedio de duración de los procesos es: %.2f\n", promedio / lista.size());
+    return promedio / lista.size();
+}
+
 // Función para comparar dos procesos por su tiempo de llegada
 bool compararPorLlegada(const procesos& a, const procesos& b) {
     return a.llegada < b.llegada;
@@ -84,6 +93,7 @@ void FCFS(int num  ){
         std::cout << "Nombre: " << proceso.nombre << ", Llegada: " << proceso.llegada
                   << ", Duración: " << proceso.duracion << std::endl;
     }
+    promedio(lista);
 }
 
 // Función para ejecutar el algoritmo SJF (Shortest Job First, Trabajo más corto primero)   
@@ -100,6 +110,7 @@ void SJF(int num){
         std::cout << "Nombre: " << proceso.nombre << ", Llegada: " << proceso.llegada
                   << ", Duración: " << proceso.duracion << std::endl;
     }
+    promedio(lista);
 }
 
 // Función para ejecutar el algoritmo RR (Round Robin)
@@ -141,10 +152,7 @@ void RR(int num, int quantum){
             std::cout << "Proceso " << proceso_actual.nombre << " completado en el tiempo " << tiempo << ".\n";
         }
     }
+    promedio(lista);
 }
-
-
-
-
 
 #endif //SISTEMAS_OPERATIVOS__FCFS_H
