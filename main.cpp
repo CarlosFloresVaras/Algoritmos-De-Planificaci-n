@@ -79,7 +79,6 @@ int main() {
       case 4:
         // Salir
         cout << "Hasta luego!" << endl;
-        Sleep(1000); // Esperar 1 segundo antes de salir
         break;
     }
 
