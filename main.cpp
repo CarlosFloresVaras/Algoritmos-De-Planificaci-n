@@ -4,8 +4,19 @@
 
 using namespace std;
 
+void acentos() {
+  #ifdef _WIN32
+  // Establecer la página de códigos de salida de la consola en UTF-8
+  SetConsoleOutputCP(CP_UTF8);
+  #else
+  // Establecer la configuración regional para todos los locales en "es_ES.UTF-8"
+  setlocale(LC_ALL, "es_ES.UTF-8");
+  #endif
+}
+
 int main() {
-  
+  acentos(); // Configurar la consola para mostrar acentos y caracteres especiales
+
   // Variables para el menú
   int opc = -1;
   int aux = -1;
@@ -72,7 +83,7 @@ int main() {
         break;
     }
 
-    // Mostrar un mensaje de confirmación
+    // Mostrar un mensaje de confirmación y esperar a que el usuario presione una tecla para continuar con el menú
     cout << endl;
     cout << "Presione cualquier tecla para continuar..." << endl;
     cin.ignore();
